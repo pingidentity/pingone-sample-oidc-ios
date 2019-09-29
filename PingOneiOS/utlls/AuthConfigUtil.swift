@@ -107,5 +107,3 @@ class AuthConfigUtil {
         }
     }
 }
-
-extension String: Error {}

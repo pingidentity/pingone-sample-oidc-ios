@@ -21,9 +21,11 @@ class MainViewController: DefaultViewController {
     
     @IBAction func infoUserClick(sender: UIButton) {
         ouathUtil.fetchUserInfo { userInfo, error in
+            self.hideLoading()
             if error == nil {
-                self.hideLoading()
                 self.openDetails(dictionary: userInfo!.asDictionary)
+            } else {
+                self.logout()
             }
         }
     }
@@ -34,6 +36,10 @@ class MainViewController: DefaultViewController {
     }
     
     @IBAction func logoutClick(sender: UIButton) {
+        logout()
+    }
+    
+    private func logout() {
         ouathUtil.logout()
         openLoginView()
     }
@@ -62,24 +68,5 @@ class MainViewController: DefaultViewController {
     
     private func proceedAfterLogin(success: Bool) {
         success ? self.hideLoading() : self.openLoginView()
-    }
-}
-
-extension String {
-
-    func fromBase64() -> String? {
-        guard let data = Data(base64Encoded: self, options: Data.Base64DecodingOptions(rawValue: 0)) else {
-            return nil
-        }
-        
-        return String(data: data as Data, encoding: String.Encoding.utf8)
-    }
-    
-    func toBase64() -> String? {
-        guard let data = self.data(using: String.Encoding.utf8) else {
-            return nil
-        }
-        
-        return data.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: 0))
     }
 }

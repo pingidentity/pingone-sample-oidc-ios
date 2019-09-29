@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		66DE171E98C22ACC46835639 /* Pods_PingOneiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A07F31B7E71D19533F7D95B /* Pods_PingOneiOS.framework */; };
+		7402154623412DD6000DEE17 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7402154523412DD6000DEE17 /* URL.swift */; };
+		7402154823412DFB000DEE17 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7402154723412DFB000DEE17 /* String.swift */; };
 		7432B9032340E71400B53EDC /* OAuthUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7432B9022340E71400B53EDC /* OAuthUtil.swift */; };
 		74364766233CB18B00FC35C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74364765233CB18B00FC35C5 /* AppDelegate.swift */; };
 		7436476D233CB18B00FC35C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7436476B233CB18B00FC35C5 /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		1A07F31B7E71D19533F7D95B /* Pods_PingOneiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PingOneiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7402154523412DD6000DEE17 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		7402154723412DFB000DEE17 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		7432B9022340E71400B53EDC /* OAuthUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthUtil.swift; sourceTree = "<group>"; };
 		74364762233CB18B00FC35C5 /* PingOneiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PingOneiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74364765233CB18B00FC35C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +81,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		7402154423412DB6000DEE17 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7402154523412DD6000DEE17 /* URL.swift */,
+				7402154723412DFB000DEE17 /* String.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 		74364759233CB18B00FC35C5 = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +112,11 @@
 		74364764233CB18B00FC35C5 /* PingOneiOS */ = {
 			isa = PBXGroup;
 			children = (
-				74959FE6233EAA6500E14ECA /* view */,
-				74959FD1233CDF3B00E14ECA /* utlls */,
-				74959FCE233CDEBA00E14ECA /* screens */,
 				74959FC5233CC48100E14ECA /* data */,
+				7402154423412DB6000DEE17 /* extensions */,
+				74959FCE233CDEBA00E14ECA /* screens */,
+				74959FD1233CDF3B00E14ECA /* utlls */,
+				74959FE6233EAA6500E14ECA /* view */,
 				74364765233CB18B00FC35C5 /* AppDelegate.swift */,
 				7436476B233CB18B00FC35C5 /* Main.storyboard */,
 				7436476E233CB18C00FC35C5 /* Assets.xcassets */,
@@ -291,6 +305,8 @@
 				74364766233CB18B00FC35C5 /* AppDelegate.swift in Sources */,
 				7432B9032340E71400B53EDC /* OAuthUtil.swift in Sources */,
 				74959FD3233CDF5800E14ECA /* AuthConfigUtil.swift in Sources */,
+				7402154623412DD6000DEE17 /* URL.swift in Sources */,
+				7402154823412DFB000DEE17 /* String.swift in Sources */,
 				74959FD0233CDEE100E14ECA /* LaunchViewController.swift in Sources */,
 				74959FE3233E909D00E14ECA /* UserInfo.swift in Sources */,
 				74959FE8233EAA7500E14ECA /* DetailViewCell.swift in Sources */,
