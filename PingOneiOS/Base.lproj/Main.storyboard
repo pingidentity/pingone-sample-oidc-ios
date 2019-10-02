@@ -27,7 +27,7 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
@@ -74,7 +74,7 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -92,7 +92,7 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
@@ -113,7 +113,7 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
@@ -157,41 +157,41 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0T4-BA-NDf">
                                 <rect key="frame" x="4" y="84" width="406" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8AN-vn-iL1">
-                                    <size key="itemSize" width="383" height="40"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8AN-vn-iL1">
+                                    <size key="itemSize" width="403" height="55"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DetailViewCell" id="tt4-Ul-ddN" customClass="DetailViewCell" customModule="PingOneiOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="383" height="40"/>
+                                        <rect key="frame" x="1.5" y="0.0" width="403" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yYI-5z-Pk2" customClass="DetailViewCell" customModule="PingOneiOS" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="40"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="403" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PqK-kb-0tj">
-                                                    <rect key="frame" x="2" y="9.5" width="42" height="21"/>
+                                                    <rect key="frame" x="2" y="1" width="42" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYy-YJ-u4L">
-                                                    <rect key="frame" x="48" y="9.5" width="42" height="21"/>
+                                                    <rect key="frame" x="2" y="32" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="mYy-YJ-u4L" firstAttribute="centerY" secondItem="yYI-5z-Pk2" secondAttribute="centerY" id="GiO-qW-ZQN"/>
-                                                <constraint firstItem="mYy-YJ-u4L" firstAttribute="leading" secondItem="PqK-kb-0tj" secondAttribute="trailing" constant="4" id="J46-xn-ris"/>
-                                                <constraint firstItem="PqK-kb-0tj" firstAttribute="leading" secondItem="yYI-5z-Pk2" secondAttribute="leading" constant="2" id="JWt-Ei-VmW"/>
-                                                <constraint firstItem="PqK-kb-0tj" firstAttribute="centerY" secondItem="yYI-5z-Pk2" secondAttribute="centerY" id="zzX-1a-1su"/>
+                                                <constraint firstAttribute="bottom" secondItem="mYy-YJ-u4L" secondAttribute="bottom" constant="2" id="5Ut-yE-p4d"/>
+                                                <constraint firstItem="PqK-kb-0tj" firstAttribute="top" secondItem="yYI-5z-Pk2" secondAttribute="top" constant="1" id="S8W-by-lbc"/>
+                                                <constraint firstItem="PqK-kb-0tj" firstAttribute="leading" secondItem="yYI-5z-Pk2" secondAttribute="leading" constant="2" id="Zt4-He-1Y3"/>
+                                                <constraint firstItem="mYy-YJ-u4L" firstAttribute="leading" secondItem="PqK-kb-0tj" secondAttribute="leading" id="eYf-qN-uaW"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="383" height="40"/>
+                                        <size key="customSize" width="403" height="55"/>
                                         <connections>
                                             <outlet property="dataLabel" destination="mYy-YJ-u4L" id="mgf-8K-yV7"/>
                                             <outlet property="keyLabel" destination="PqK-kb-0tj" id="X7p-Fz-Lb8"/>

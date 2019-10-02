@@ -6,8 +6,9 @@
 //  Copyright © 2019 Vadym Kovalskyi. All rights reserved.
 //
 import UIKit
+import SafariServices
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, SFSafariViewControllerDelegate {
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +16,27 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginClick(sender: UIButton){
         // open webview with auth
-        UIApplication.shared.open(buildLoginUrl())
+        showLinksClicked()
+    }
+    
+    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebView.NavigationType) -> Bool {
+        if navigationType == UIWebView.NavigationType.linkClicked {
+           self.showLinksClicked()
+           return false
+
+        }
+        return true;
+    }
+
+    func showLinksClicked() {
+
+        let safariVC = SFSafariViewController(url: buildLoginUrl())
+        self.present(safariVC, animated: true, completion: nil)
+        safariVC.delegate = self as SFSafariViewControllerDelegate
+    }
+
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        controller.dismiss(animated: true, completion: nil)
     }
     
     private func buildLoginUrl() -> URL {

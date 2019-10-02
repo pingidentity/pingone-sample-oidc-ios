@@ -68,5 +68,6 @@ class MainViewController: DefaultViewController {
     
     private func proceedAfterLogin(success: Bool) {
         success ? self.hideLoading() : self.openLoginView()
+        authUtil.accessCode = nil
     }
 }

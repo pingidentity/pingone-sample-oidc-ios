@@ -26,9 +26,9 @@ struct UserInfo: Codable {
         switch label {
             case "email": return "User email address."
             case "given_name": return "User given name."
-            case "preferred_username":return  "User\"s full name."
+            case "preferred_username":return  "User\'s full name."
             case "sub": return "User Identifier."
-            case "updated_at": return "Last time User\"s information was updated."
+            case "updated_at": return "Last time User\'s information was updated."
             default: return label
         }
     }
