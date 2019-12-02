@@ -16,7 +16,10 @@ class MainViewController: DefaultViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        proceedWithFlow()
+        proceedWithPKCE()
+        
+        // If PKCE is not enabled we have to go through basic OAuth2 login methods
+        // proceedWithFlow()
     }
     
     @IBAction func infoUserClick(sender: UIButton) {
@@ -42,6 +45,15 @@ class MainViewController: DefaultViewController {
     private func logout() {
         ouathUtil.logout()
         openLoginView()
+    }
+    
+    private func proceedWithPKCE() {
+        if (authUtil.accessCode != nil) {
+            showLoading()
+            self.ouathUtil.proceedWithPKCE { success in
+                self.proceedAfterLogin(success: success)
+            }
+        }
     }
 
     private func proceedWithFlow() {

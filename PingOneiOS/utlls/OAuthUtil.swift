@@ -14,6 +14,36 @@ class OAuthUtil {
     
     private init() {}
     
+    func proceedWithPKCE(completion: @escaping (Bool) -> Void) {
+        let url = String(format: authUtil.authData!.token_endpoint)
+        
+        var headers = HTTPHeaders()
+        headers.add(name: "Content-Type", value: "application/x-www-form-urlencoded")
+        
+        let parameters = [
+            "code": authUtil.accessCode,
+            "grant_type": "authorization_code",
+            "client_id": authUtil.configData?.client_id,
+            "redirect_uri": authUtil.configData?.redirect_uri,
+            "code_verifier": AuthConfigUtil.shared.codeVerifier
+        ]
+        
+        AF.request(url, method: .post, parameters: parameters, headers: headers)
+            .responseDecodable { (response: DataResponse<AccessCode, AFError>) in
+                print(response)
+                guard (response.error == nil) else {
+                    print("Error while gathering access code: \(String(describing: response.error))")
+                    completion(false)
+                    return
+                }
+
+                let decoder = JSONDecoder()
+                let accessCode  = try? decoder.decode(AccessCode.self, from: response.data!)
+                self.authUtil.saveAccessCode(accessToken: accessCode!)
+                completion(true)
+        }
+    }
+    
     func proceedWithPost(completion: @escaping (Bool) -> Void) {
         let url = String(format: authUtil.authData!.token_endpoint)
         

@@ -14,6 +14,7 @@
 		74364766233CB18B00FC35C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74364765233CB18B00FC35C5 /* AppDelegate.swift */; };
 		7436476D233CB18B00FC35C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7436476B233CB18B00FC35C5 /* Main.storyboard */; };
 		7436476F233CB18C00FC35C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7436476E233CB18C00FC35C5 /* Assets.xcassets */; };
+		748D8EAD239000C5002FAED0 /* PKCEData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748D8EAC239000C5002FAED0 /* PKCEData.swift */; };
 		74959FC8233CC49800E14ECA /* AuthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74959FC6233CC49800E14ECA /* AuthData.swift */; };
 		74959FC9233CC49800E14ECA /* EnvData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74959FC7233CC49800E14ECA /* EnvData.swift */; };
 		74959FCB233CC53200E14ECA /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74959FCA233CC53200E14ECA /* DesignableView.swift */; };
@@ -41,6 +42,7 @@
 		7436476C233CB18B00FC35C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7436476E233CB18C00FC35C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74364773233CB18C00FC35C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		748D8EAC239000C5002FAED0 /* PKCEData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKCEData.swift; sourceTree = "<group>"; };
 		74959FC6233CC49800E14ECA /* AuthData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthData.swift; sourceTree = "<group>"; };
 		74959FC7233CC49800E14ECA /* EnvData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvData.swift; sourceTree = "<group>"; };
 		74959FCA233CC53200E14ECA /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				74959FD8233E146400E14ECA /* TokenMethod.swift */,
 				74959FE0233E875500E14ECA /* TokenInfo.swift */,
 				74959FE2233E909D00E14ECA /* UserInfo.swift */,
+				748D8EAC239000C5002FAED0 /* PKCEData.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			files = (
 				74959FD5233CF04300E14ECA /* LoginViewController.swift in Sources */,
 				74959FDD233E1A0800E14ECA /* AccessCode.swift in Sources */,
+				748D8EAD239000C5002FAED0 /* PKCEData.swift in Sources */,
 				74959FCB233CC53200E14ECA /* DesignableView.swift in Sources */,
 				74959FE1233E875500E14ECA /* TokenInfo.swift in Sources */,
 				74959FD7233E078300E14ECA /* MainViewConroller.swift in Sources */,

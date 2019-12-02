@@ -8,6 +8,7 @@
 import Alamofire
 import KeychainSwift
 import JWTDecode
+import CommonCrypto
 
 class AuthConfigUtil {
     
@@ -16,6 +17,7 @@ class AuthConfigUtil {
     var configData: EnvData?
     var authData: AuthData?
     var accessCode: String?
+    let codeVerifier = AuthConfigUtil.generateCodeVerifier()
     
     private init(){}
     
@@ -88,6 +90,43 @@ class AuthConfigUtil {
                }
            }
            return nil
+    }
+    
+    private static func generateCodeVerifier() -> String {
+        var buffer = [UInt8](repeating: 0, count: 64)
+        _ = SecRandomCopyBytes(kSecRandomDefault, buffer.count, &buffer)
+        let codeVerifier = Data(bytes: buffer)
+            .base64EncodedString()
+            .replacingOccurrences(of: "+", with: "-")
+            .replacingOccurrences(of: "/", with: "-")
+            .replacingOccurrences(of: "=", with: "-")
+            .trimmingCharacters(in: .whitespaces)
+            
+        return codeVerifier
+    }
+    
+    func generateCodeChallenge() -> String? {
+        guard let data = codeVerifier.data(using: .utf8) else { return nil }
+        var buffer = [UInt8](repeating: 0,  count: Int(CC_SHA256_DIGEST_LENGTH))
+        data.withUnsafeBytes {
+            _ = CC_SHA256($0, CC_LONG(data.count), &buffer)
+        }
+        let hash = Data(bytes: buffer)
+
+        
+        let challenge = hash.base64EncodedString()
+            
+        .replacingOccurrences(of: "+", with: "-")
+        .replacingOccurrences(of: "/", with: "_")
+        .replacingOccurrences(of: "=", with: "")
+        .trimmingCharacters(in: .whitespaces)
+        
+        return challenge
+    }
+    
+    private static func randomString(length: Int) -> String {
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return String((0..<length).map{ _ in letters.randomElement()! })
     }
     
     private func obtainAuthConfig(completion: @escaping (AuthData?, AFError?) -> Void) {

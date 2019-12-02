@@ -49,7 +49,9 @@ class LoginViewController: UIViewController, SFSafariViewControllerDelegate {
             URLQueryItem(name: "client_id", value: configData.client_id),
             URLQueryItem(name: "response_type", value: "code"),
             URLQueryItem(name: "nonce", value: UUID().uuidString),
-            URLQueryItem(name: "prompt", value: "login")
+            URLQueryItem(name: "prompt", value: "login"),
+            URLQueryItem(name: "code_challenge", value: AuthConfigUtil.shared.generateCodeChallenge()),
+            URLQueryItem(name: "code_challenge_method", value: "S256")
         ]
         
         return url.appending(queryItems: queryItems)!
