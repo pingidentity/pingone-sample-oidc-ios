@@ -16,10 +16,7 @@ class MainViewController: DefaultViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        proceedWithPKCE()
-        
-        // If PKCE is not enabled we have to go through basic OAuth2 login methods
-        // proceedWithFlow()
+        proceedWithFlow()
     }
     
     @IBAction func infoUserClick(sender: UIButton) {
@@ -69,7 +66,7 @@ class MainViewController: DefaultViewController {
                         self.proceedAfterLogin(success: success)
                 }
                 case TokenMethod.NONE.description:
-                    self.ouathUtil.proceedWithNone { success in
+                    self.ouathUtil.proceedWithPKCE { success in
                         self.proceedAfterLogin(success: success)
                 }
                 default:
