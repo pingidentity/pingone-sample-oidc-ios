@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hC9-mh-5H7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="PingOneiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5aa-PU-t4Y" customClass="DesignableButton" customModule="PingOneiOS" customModuleProvider="target">
+                                <rect key="frame" x="40" y="742" width="334" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="JxR-fK-hiR"/>
+                                </constraints>
+                                <state key="normal" title="Log In"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginClickWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SDQ-3I-qC0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5aa-PU-t4Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PAt-eu-1Q2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5aa-PU-t4Y" secondAttribute="bottom" constant="80" id="a43-ZO-8ET"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5aa-PU-t4Y" secondAttribute="trailing" constant="40" id="jnp-ZM-lrA"/>
+                            <constraint firstItem="5aa-PU-t4Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="meT-gB-Oi9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49" y="88"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="utf-oC-Rq0">
+            <objects>
+                <viewController storyboardIdentifier="MainVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NIO-Wy-sKr" customClass="MainViewController" customModule="PingOneiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="btq-Hh-obc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbs-aq-FPp" customClass="DesignableButton" customModule="PingOneiOS" customModuleProvider="target">
+                                <rect key="frame" x="40" y="742" width="334" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="dbs-cl-TWW"/>
+                                </constraints>
+                                <state key="normal" title="Log Out"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logoutClickWithSender:" destination="NIO-Wy-sKr" eventType="touchUpInside" id="AWj-DW-Pzt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdT-QB-Tk3" customClass="DesignableButton" customModule="PingOneiOS" customModuleProvider="target">
+                                <rect key="frame" x="40" y="682" width="334" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="wJM-78-h75"/>
+                                </constraints>
+                                <state key="normal" title="Show user info"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="infoUserClickWithSender:" destination="NIO-Wy-sKr" eventType="touchUpInside" id="hgh-UE-HvT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6j2-j0-3lo" customClass="DesignableButton" customModule="PingOneiOS" customModuleProvider="target">
+                                <rect key="frame" x="40" y="622" width="334" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ylw-bT-cyO"/>
+                                </constraints>
+                                <state key="normal" title="Show token info"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="infoTokenClickWithSender:" destination="NIO-Wy-sKr" eventType="touchUpInside" id="KGg-um-jfK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jbs-aq-FPp" firstAttribute="leading" secondItem="bdP-Wd-igg" secondAttribute="leading" constant="40" id="0wP-45-vIe"/>
+                            <constraint firstItem="jbs-aq-FPp" firstAttribute="centerX" secondItem="btq-Hh-obc" secondAttribute="centerX" id="3HU-xe-4ua"/>
+                            <constraint firstItem="6j2-j0-3lo" firstAttribute="centerX" secondItem="btq-Hh-obc" secondAttribute="centerX" id="7q0-tX-d45"/>
+                            <constraint firstItem="jbs-aq-FPp" firstAttribute="top" secondItem="fdT-QB-Tk3" secondAttribute="bottom" constant="20" id="8Nm-FJ-9iP"/>
+                            <constraint firstItem="fdT-QB-Tk3" firstAttribute="top" secondItem="6j2-j0-3lo" secondAttribute="bottom" constant="20" id="IoX-K6-AjB"/>
+                            <constraint firstItem="bdP-Wd-igg" firstAttribute="trailing" secondItem="jbs-aq-FPp" secondAttribute="trailing" constant="40" id="P1A-kE-HfJ"/>
+                            <constraint firstItem="bdP-Wd-igg" firstAttribute="trailing" secondItem="6j2-j0-3lo" secondAttribute="trailing" constant="40" id="Spk-vA-AWF"/>
+                            <constraint firstItem="6j2-j0-3lo" firstAttribute="leading" secondItem="bdP-Wd-igg" secondAttribute="leading" constant="40" id="ema-nU-LKf"/>
+                            <constraint firstItem="bdP-Wd-igg" firstAttribute="bottom" secondItem="jbs-aq-FPp" secondAttribute="bottom" constant="80" id="gfY-x2-G1r"/>
+                            <constraint firstItem="fdT-QB-Tk3" firstAttribute="centerX" secondItem="btq-Hh-obc" secondAttribute="centerX" id="qWf-Qj-6s6"/>
+                            <constraint firstItem="fdT-QB-Tk3" firstAttribute="leading" secondItem="bdP-Wd-igg" secondAttribute="leading" constant="40" id="une-CI-D7K"/>
+                            <constraint firstItem="bdP-Wd-igg" firstAttribute="trailing" secondItem="fdT-QB-Tk3" secondAttribute="trailing" constant="40" id="wbV-ya-2wX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bdP-Wd-igg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="STO-Vu-cuo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="761" y="88"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="4kL-gq-k2S">
+            <objects>
+                <viewController storyboardIdentifier="DetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zuu-he-44g" customClass="DetailsViewController" customModule="PingOneiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q49-2R-vvh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0T4-BA-NDf">
+                                <rect key="frame" x="4" y="84" width="406" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8AN-vn-iL1">
+                                    <size key="itemSize" width="403" height="55"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DetailViewCell" id="tt4-Ul-ddN" customClass="DetailViewCell" customModule="PingOneiOS" customModuleProvider="target">
+                                        <rect key="frame" x="1.5" y="0.0" width="403" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yYI-5z-Pk2" customClass="DetailViewCell" customModule="PingOneiOS" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="403" height="55"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PqK-kb-0tj">
+                                                    <rect key="frame" x="2" y="1" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYy-YJ-u4L">
+                                                    <rect key="frame" x="2" y="32" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="mYy-YJ-u4L" secondAttribute="bottom" constant="2" id="5Ut-yE-p4d"/>
+                                                <constraint firstItem="PqK-kb-0tj" firstAttribute="top" secondItem="yYI-5z-Pk2" secondAttribute="top" constant="1" id="S8W-by-lbc"/>
+                                                <constraint firstItem="PqK-kb-0tj" firstAttribute="leading" secondItem="yYI-5z-Pk2" secondAttribute="leading" constant="2" id="Zt4-He-1Y3"/>
+                                                <constraint firstItem="mYy-YJ-u4L" firstAttribute="leading" secondItem="PqK-kb-0tj" secondAttribute="leading" id="eYf-qN-uaW"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="403" height="55"/>
+                                        <connections>
+                                            <outlet property="dataLabel" destination="mYy-YJ-u4L" id="mgf-8K-yV7"/>
+                                            <outlet property="keyLabel" destination="PqK-kb-0tj" id="X7p-Fz-Lb8"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="zuu-he-44g" id="bRg-BZ-gKw"/>
+                                    <outlet property="delegate" destination="zuu-he-44g" id="WhS-5a-f4d"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgz-CQ-Ohd">
+                                <rect key="frame" x="355" y="46" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeWithSender:" destination="zuu-he-44g" eventType="touchUpInside" id="hgW-Ml-66Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VId-02-3ce" firstAttribute="bottom" secondItem="0T4-BA-NDf" secondAttribute="bottom" constant="4" id="2uc-3e-XcS"/>
+                            <constraint firstItem="0T4-BA-NDf" firstAttribute="leading" secondItem="VId-02-3ce" secondAttribute="leading" constant="4" id="9BK-Oc-XAc"/>
+                            <constraint firstItem="pgz-CQ-Ohd" firstAttribute="trailing" secondItem="Q49-2R-vvh" secondAttribute="trailingMargin" id="JLE-bK-L1G"/>
+                            <constraint firstItem="pgz-CQ-Ohd" firstAttribute="top" secondItem="VId-02-3ce" secondAttribute="top" constant="2" id="WFi-M9-WdL"/>
+                            <constraint firstItem="0T4-BA-NDf" firstAttribute="top" secondItem="VId-02-3ce" secondAttribute="top" constant="40" id="tTe-UP-bmg"/>
+                            <constraint firstItem="0T4-BA-NDf" firstAttribute="centerX" secondItem="Q49-2R-vvh" secondAttribute="centerX" id="whc-Gs-X61"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VId-02-3ce"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="0T4-BA-NDf" id="1fz-WU-1TQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E72-1V-B11" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1456.521739130435" y="87.723214285714278"/>
+        </scene>
+        <!--Launch View Controller-->
+        <scene sceneID="jpj-Kj-HqO">
+            <objects>
+                <viewController id="hC9-mh-5H7" customClass="LaunchViewController" customModule="PingOneiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VAH-Gv-pc8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PingOne" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6r-8I-e8b">
+                                <rect key="frame" x="174" y="437.5" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="e6r-8I-e8b" firstAttribute="centerY" secondItem="VAH-Gv-pc8" secondAttribute="centerY" id="1h8-SP-zM1"/>
+                            <constraint firstItem="e6r-8I-e8b" firstAttribute="centerX" secondItem="VAH-Gv-pc8" secondAttribute="centerX" id="Bu1-Ye-7C6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HTZ-7B-enn"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dNQ-e4-hgg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-671" y="88"/>
+        </scene>
+    </scenes>
+</document>
