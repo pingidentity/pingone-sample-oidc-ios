@@ -1,10 +1,3 @@
-//
-//  EnvData.swift
-//  PingOne
-//
-//  Created by Vadym Kovalskyi on 9/25/19.
-//  Copyright © 2019 Vadym Kovalskyi. All rights reserved.
-//
 struct EnvData:Decodable {
     let environment_id: String
     let client_id: String

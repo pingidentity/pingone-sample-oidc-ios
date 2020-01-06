@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  PingOne
-//
-//  Created by Vadym Kovalskyi on 9/25/19.
-//  Copyright © 2019 Vadym Kovalskyi. All rights reserved.
-//
 import UIKit
 
 class LaunchViewController: DefaultViewController {
