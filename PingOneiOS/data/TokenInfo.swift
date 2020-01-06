@@ -1,11 +1,3 @@
-//
-//  TokenInfo.swift
-//  PingOneiOS
-//
-//  Created by Vadym Kovalskyi on 9/27/19.
-//  Copyright © 2019 Vadym Kovalskyi. All rights reserved.
-//
-
 struct TokenInfo: Codable {
     let acr: String
     let at_hash: String
@@ -25,7 +17,7 @@ struct TokenInfo: Codable {
         let mirror = Mirror(reflecting: self)
         let dict = Dictionary(uniqueKeysWithValues: mirror.children.lazy.map({ (label:String?,value:Any) -> (String,Any)? in
             guard label != nil else { return nil }
-            return (self.mapLabel(label: label!),value)
+            return (label, value) as? (String, Any)
         }).compactMap{ $0 })
         return dict
     }

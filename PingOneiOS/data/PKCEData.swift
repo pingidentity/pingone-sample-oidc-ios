@@ -1,11 +1,3 @@
-//
-//  PKCEData.swift
-//  PingOneiOS
-//
-//  Created by Vadym Kovalskyi on 11/28/19.
-//  Copyright © 2019 Vadym Kovalskyi. All rights reserved.
-//
-
 struct PKCEData: Encodable {
     let name: String
     let description: String

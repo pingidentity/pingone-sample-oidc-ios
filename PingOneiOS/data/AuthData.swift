@@ -1,10 +1,3 @@
-//
-//  AuthData.swift
-//  PingOne
-//
-//  Created by Vadym Kovalskyi on 9/25/19.
-//  Copyright © 2019 Vadym Kovalskyi. All rights reserved.
-//
 struct AuthData:Decodable {
     let authorization_endpoint: String
     let claim_types_supported: Array<String>
