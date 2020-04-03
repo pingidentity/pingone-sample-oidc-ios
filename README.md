@@ -1,5 +1,5 @@
 # OIDC Authentication iOS Sample
-Provides an example login android  application for use with PingOne for Customers. This sample application is written in Swift
+Provides an example login iOS  application for use with PingOne for Customers. This sample application is written in Swift
 
 Sample config
 ```
@@ -26,7 +26,7 @@ the user. *REDIRECT URLS* values corresponds to this data. The Access and ID Tok
  [PingOne platform scopes](https://apidocs.pingidentity.com/pingone/customer/v1/api/auth/p1-a_AccessServices/#PingOne-platform-scopes-and-endpoint-operations) 
  are configured under "Access" tab in PingOne Admin Console
  - `discovery_uri`: *Required*. The URL describe App configuration with allowed methods, system URL's, etc
- - `token method`: *Required*. The login method what is ena,bled in Applicatin configuration, possible variants - CLIENT_SECRET_POST || CLIENT_SECRET_BASIC || NONE
+ - `token method`: *Required*. The login method what is enabled in Applicatin configuration, possible variants - CLIENT_SECRET_POST || CLIENT_SECRET_BASIC || NONE
  - `client_secret`: *Required*. Your application's client secret. You can also find this value at Application's Settings page
 
 ## Getting Started
