@@ -1,3 +1,5 @@
+# Deprecated
+
 # OIDC Authentication iOS Sample
 Provides an example login iOS  application for use with PingOne for Customers. This sample application is written in Swift
 
